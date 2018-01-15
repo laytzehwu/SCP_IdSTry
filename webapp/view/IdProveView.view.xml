@@ -19,6 +19,14 @@
 						<Label text="Email"/>
 						<Text xmlns="sap.m" text="{userapi>/email}"/>
 				    </l:VerticalLayout>
+					<l:VerticalLayout xmlns:sap.ui.layout="sap.ui.layout" width="100%" id="__layout1">
+						<Button
+							icon="sap-icon://world"
+							text="{i18n>openDialogButtonText}"
+							press="onOpenDialog"
+							class="sapUiSmallMarginEnd sapUiVisibleOnlyOnDesktop"/>
+						
+					</l:VerticalLayout>
 				</content>
 			</Page>
 		</pages>

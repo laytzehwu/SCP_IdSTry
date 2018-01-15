@@ -50,6 +50,11 @@ sap.ui.define(["sap/ui/core/mvc/Controller"], function(Controller) {
 				oUserModel.loadData(this.sUserPath);
 				return;
 			}
+		},
+		
+		onOpenDialog : function () {
+			this.getOwnerComponent().openHelloDialog();
 		}
+		
 	});
 });

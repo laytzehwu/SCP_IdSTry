@@ -1,8 +1,9 @@
 sap.ui.define([
 	"sap/ui/core/UIComponent",
 	"sap/ui/Device",
-	"IdTry/model/models"
-], function(UIComponent, Device, models) {
+	"IdTry/model/models",
+	"sap/ui/demo/wt/controller/IDDialog"
+], function(UIComponent, Device, models, IDDialog) {
 	"use strict";
 
 	return UIComponent.extend("IdTry.Component", {
@@ -22,6 +23,13 @@ sap.ui.define([
 
 			// set the device model
 			this.setModel(models.createDeviceModel(), "device");
+			
+			this._idDialog = new IDDialog(this.getRootControl());
+		},
+		
+		openIDDialog : function () {
+			this._idDialog.open();
 		}
+		
 	});
 });
