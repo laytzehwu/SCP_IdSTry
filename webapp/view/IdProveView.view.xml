@@ -1,0 +1,26 @@
+<mvc:View xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns:l="sap.ui.layout" xmlns="sap.m" controllerName="IdTry.controller.IdProveView" displayBlock="true">
+	<App>
+		<pages>
+			<Page title="{i18n>title}">
+				<content>
+				    <Button text="Test" width="100px" id="__button0" press="doTest"/>
+				    <Button text="Clear" width="100px" id="__button1" press="doClear"/>
+				    <Button text="Check Data" width="100px" id="__button2" press="doCheckData"/>
+				    <Button text="Reload" width="100px" id="__button3" press="doReload"/>
+				    <l:VerticalLayout xmlns:sap.ui.layout="sap.ui.layout" width="100%" id="__layout0">
+				    	<Label text="User Name"/>
+				    	<Text xmlns="sap.m" text="{userapi>/name}"/>
+				    	<Label text="First Name"/>
+						<Text xmlns="sap.m" text="{userapi>/firstName}"/>
+						<Label text="Last Name"/>
+						<Text xmlns="sap.m" text="{userapi>/lastName}"/>
+						<Label text="Display Name"/>
+						<Text xmlns="sap.m" text="{userapi>/displayName}"/>
+						<Label text="Email"/>
+						<Text xmlns="sap.m" text="{userapi>/email}"/>
+				    </l:VerticalLayout>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
